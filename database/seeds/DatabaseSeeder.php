@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         // factory(App\Category::class)->create();
         $this->call(CategoriesTableSeeder::class);
         // factory(App\Price::class)->create();
-        // $this->call(PricesTableSeeder::class);
+        $this->call(PricesTableSeeder::class);
         // factory(App\Brand::class)->create();
          $this->call(BrandsTableSeeder::class);
 
