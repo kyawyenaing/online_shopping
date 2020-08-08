@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware'=>'auth','namespace'=>'Admin','prefix'=>'/admin'],function(){
+    Route::get('/categories','CategoryController@index');
+    Route::resource('/prices','PriceController');
+});
