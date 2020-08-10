@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 </head>
 <body>
     <div id="app">
@@ -98,10 +103,17 @@
             @yield('content')
         </main>
         <footer>
-            <nav class="navbar bg-dark text-white">
+            <nav class="navbar navbar-dark bg-dark text-white">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi ad delectus iure nesciunt! Nemo ipsum cumque, aut est dolore sed iusto dicta praesentium nihil error ullam molestiae aliquid enim dolores.
             </nav>
         </footer>
     </div>
 </body>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+$('.prd-slider').slick();
+        
+});
+</script>
 </html>
