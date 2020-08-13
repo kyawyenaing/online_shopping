@@ -18,10 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -37,17 +34,15 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        
+                    <ul class="navbar-nav mr-auto">       
                     </ul>
-                    <form action="" class="form-horizontal col-md-6 ml-2">
+                    <form action="" class="form-horizontal col-md-6 ml-4">
                         <div class="input-group">
-                            <input type="text" class="form-control"/>
+                            <input class="form-control" type="text">
                             <div class="input-group-append">
                                 <button class="btn btn-success">Search</button>
                             </div>
-                        </div>
-                        
+                        </div>   
                     </form>
 
                     <!-- Right Side Of Navbar -->
@@ -87,16 +82,13 @@
         </nav>
         <nav class="navbar navbar-expand-md navbar-light bg-success shadow-sm p-2">
             <div class="container">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="mr-4"><a href="#" class="text-decoration-none text-white" style="font-size:20px">Home</a></li>
                     </ul>
-                    <!-- Right Side of Nav -->
                     <ul class="navbar-vav ml-auto">
-
                     </ul>
-                </div>
+                </div> 
             </div>
         </nav>
         <main class="py-4">
@@ -109,11 +101,25 @@
         </footer>
     </div>
 </body>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
-    $(document).ready(function(){
-$('.prd-slider').slick();
-        
+$('.product-slide .carousel-item').each(function(){
+    var next = $(this).next();
+    console.log($(this));
+    console.log(next);
+    if (!next.length) {
+        next = $(this).siblings(':first');
+        // next = $('.product-slide .carousel-item active');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (var i=0;i<2;i++) {
+        next = next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+        next.children(':first-child').clone().appendTo($(this));
+    }
 });
+
 </script>
 </html>
