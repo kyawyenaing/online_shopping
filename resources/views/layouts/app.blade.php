@@ -102,13 +102,13 @@
     </div>
 </body>
 <script>
-$('.product-slide .carousel-item').each(function(){
+$('.feature-one-slide .carousel-item').each(function(){
     var next = $(this).next();
     console.log($(this));
     console.log(next);
     if (!next.length) {
         next = $(this).siblings(':first');
-        // next = $('.product-slide .carousel-item active');
+        // next = $('.feature-one-slide .carousel-item active');
     }
     next.children(':first-child').clone().appendTo($(this));
     

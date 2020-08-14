@@ -65,13 +65,13 @@
         <!-- test -->
         <div class="row mx-auto my-auto-center mb-4">
         <div class="row">
-            <h3 class="col-md-10 text-success">Hot List</h3>
+            <h3 class="col-md-10 text-success">မိုးရာသီအတွက် အသုံးအဆောင်ပစ္စည်းများ</h3>
             <div class="col-md-2">
             <a href="#">See More...</a>
             </div>
         </div>
-        <div id="recipeCarousel" class="carousel slide product-slide w-100" data-ride="carousel" data-interval="2000" pause="hover">
-            <div class="carousel-inner product w-100" role="listbox">
+        <div id="recipeCarousel" class="carousel slide feature-one-slide w-100" data-ride="carousel" data-interval="2000" pause="hover">
+            <div class="carousel-inner feature-one w-100" role="listbox">
                 <div class="carousel-item active">
                     <div class="card col-md-3">
                         <div class="card-header text-center">First Product</div>

@@ -1,22 +1,22 @@
 
-.product .carousel-item.active,
-.product .carousel-item-next,
-.product .carousel-item-prev {
+.feature-one .carousel-item.active,
+.feature-one .carousel-item-next,
+.feature-one .carousel-item-prev {
   display: flex;
 }
 
-.product .carousel-item-right.active,
-.product .carousel-item-next {
+.feature-one .carousel-item-right.active,
+.feature-one .carousel-item-next {
   transform: translateX(25%);
 }
 
-.product .carousel-item-left.active, 
-.product .carousel-item-prev {
+.feature-one .carousel-item-left.active, 
+.feature-one .carousel-item-prev {
   transform: translateX(-25%);
 }
   
-.product .carousel-item-right,
-.product .carousel-item-left{ 
+.feature-one .carousel-item-right,
+.feature-one .carousel-item-left{ 
   transform: translateX(0);
   
 }
